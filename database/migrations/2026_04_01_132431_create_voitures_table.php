@@ -10,7 +10,7 @@ return new class extends Migration
      * Run the migrations.
      */
    public function up(): void
-{
+   {
     Schema::create('voitures', function (Blueprint $table) {
         $table->id();
         $table->string('marque');
@@ -18,10 +18,11 @@ return new class extends Migration
         $table->integer('km')->default(0);
         $table->timestamps();
     });
-}
+   }
     /**
      * Reverse the migrations.
      */
+
     public function down(): void
     {
         Schema::dropIfExists('voitures');
