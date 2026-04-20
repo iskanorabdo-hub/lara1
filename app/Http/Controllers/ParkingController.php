@@ -30,7 +30,7 @@ class ParkingController extends Controller
         $parking = Parking::findOrFail($id);
         return view('parking.showp', compact('parking'));
     }
-public function ajouter()
+    public function ajouter()
     {
         return view('parking.inserer');
     }
@@ -69,3 +69,9 @@ public function ajouter()
     return redirect()->route('liste-parking');
 }
 }
+
+
+
+
+
+
