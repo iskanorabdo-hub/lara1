@@ -10,8 +10,15 @@
 
 <a href="{{route('liste-parking')}}">Retour a listeparking</a><br>
 <a href="{{route('liste')}}">Retour a listevoiture</a>
-<p>{{$parking->ville}}</p>
-<p>{{$parking->capacite}}</p>
-<p>{{$parking->prix}}</p>
+<p> ville : {{$parking->ville}}</p>
+<p> capacite : {{$parking->capacite}}</p>
+<p>prix : {{$parking->prix_heure}} dh</p>
+<ul>
+@foreach($parking->voitures as $v)
+<li>
+{{ $v->marque}}
+@endforeach
+</li>
+</ul>
 </body>
 </html>

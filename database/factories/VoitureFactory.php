@@ -15,6 +15,7 @@ class VoitureFactory extends Factory
         'marque' => $this->faker->company(),
         'model' => $this->faker->word(), // OK maintenant
         'km' => $this->faker->numberBetween(1000, 200000),
+        'parking_id'=> $this->faker->numberBetween(1,21),
     ];
 }
 }
